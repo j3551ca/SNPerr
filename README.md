@@ -6,4 +6,4 @@ User input: distribution of nucleotide frequencies at one genomic site (A, C, G,
 
 Sample output:
 
-![SNPerrPic.png](/image/SNPerrPic.png)
+![SNPerrPic.png](https://github.com/j3551ca/SNPerr/blob/main/image/SNPerrPic.png?raw=true)
