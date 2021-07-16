@@ -4,8 +4,8 @@ import pandas as pd
 from matplotlib import pyplot as plt
 
 
-#Concept & Shannon Diversity sections @author: pbelange
-#adapted by @author: jcaleta
+#pi,alt,adapted by @author: jcaleta
+#shandiv concept @author: pbelange
 ############################################################################################################
 #DEFINE FUNCTIONS & VARIABLES
 #############################################################################################################
@@ -49,17 +49,26 @@ def exper_alt(random_nt_count):
     N = np.sum(alt_mat, axis=0)
     max_alt = alt_mat.max(axis=0)
     return (N-max_alt)/N*100 
-        
-nt_distr=pd.read_csv('ACGT_distr.txt', sep='\t', header=None)
-nt_distr=np.asarray(nt_distr.iloc[:,1:5])  
-distr=sp.mode(nt_distr, axis=0).mode
+###########################################################################################################################       
+print("Welcome to SNPerr - Simulating effects of read depth and variant frequency on diversity measures")
+organism = input("Enter number of replicates for each read depth:")
+nt_distr = input("Enter desired distribution of nucleotide frequencies at one site in the genome (A, C, G, T) \
+              ex. (0.04, 0.95, 0, 0.01):")
+
+
+
+#nucleotide distribution from real sequencing data
+#nt_distr=pd.read_csv('ACGT_distr.txt', sep='\t', header=None)
+#nt_distr=np.asarray(nt_distr.iloc[:,1:5])  
+#distr=sp.mode(nt_distr, axis=0).mode
+#simulated nt freq distribution
+distr=np.asarray(nt_distr)
 distr=distr[0]/100
 distr=np.around(distr, decimals=2, out=None)
 distr=distr/np.sum(distr)
 
 N = np.logspace(1,6,60).astype(int)
-organism = 100
-
+organism = 100     
 
 #########################SHANNON DIVERSITY SIM###########################################################################   
 
