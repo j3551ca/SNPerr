@@ -6,4 +6,4 @@ User input:
 
 Sample output:
 
-![output](https://github.com/j3551ca/SNPerr/tree/main/image)
+![output](https://github.com/j3551ca/SNPerr/blob/main/image/SNPerrPic.png)
