@@ -5,4 +5,5 @@ The purpose of this package ("snip-er") is to select variant frequency and seque
 User input: 
 
 Sample output:
-https://github.com/j3551ca/SNPerr/tree/main/image
+
+![output] https://github.com/j3551ca/SNPerr/tree/main/image
